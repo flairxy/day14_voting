@@ -1,9 +1,12 @@
-const SimpleStorage = artifacts.require("SimpleStorage");
-const TutorialToken = artifacts.require("TutorialToken");
-const ComplexStorage = artifacts.require("ComplexStorage");
+const Voting = artifacts.require("Voting");
 
-module.exports = function(deployer) {
-  deployer.deploy(SimpleStorage);
-  deployer.deploy(TutorialToken);
-  deployer.deploy(ComplexStorage);
+module.exports = async function (deployer, _network, accounts) {
+  await deployer.deploy(Voting);
+  const voting = await Voting.deployed();
+  await voting.addVoters([accounts[1], accounts[2], accounts[3]]);
+  // await voting.createBallot(
+  //   "Who should be President?",
+  //   ["Trump", "Biden", "Hillary"],
+  //   120
+  // );
 };

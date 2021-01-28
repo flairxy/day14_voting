@@ -1,0 +1,2 @@
+# run truffle develop and then migrate --reset
+# cd into vapp folder and run npm run serve

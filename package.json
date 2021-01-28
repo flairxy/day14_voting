@@ -1,7 +1,7 @@
 {
   "name": "drizzle-vue-box",
   "version": "0.0.1",
-  "description": "",
+  "description": "A voting dapp",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
