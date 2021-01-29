@@ -60,12 +60,11 @@
     </form>
     <hr>
     <h5>Get Results</h5>
-    <p>This operation can only be done by the admin account[0]</p>
     <form>
         <p>
         <ul>
           <li v-for="result in results" :key="result.id">
-             {{ result.name }}: {{ result.id }}
+             {{ result.name }}:  {{ result.votes }} votes
           </li>
         </ul>
       </p>
